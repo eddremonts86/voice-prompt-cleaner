@@ -1,0 +1,210 @@
+{
+  "generatedAt": "2026-04-28T18:00:53.123Z",
+  "source": "local",
+  "total": 25,
+  "passed": 25,
+  "failed": 0,
+  "passRate": 1,
+  "cases": [
+    {
+      "id": "01-simple-goal",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nRefactor App.tsx to use the new API and keep behaviour identical.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unre"
+    },
+    {
+      "id": "02-finalisation-cue",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nRefactor App.tsx to use the new API.\n\n## Requirements\n- Ship it.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrel"
+    },
+    {
+      "id": "03-finalisation-es",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are Claude Code with file-edit tools.\n\n## Goal\nRefactoriza App.tsx para usar el nuevo API.\n\n## Requirements\n- Listo.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "04-contradiction-actually",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nmake it light purple.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "05-contradiction-chain",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nmake that purple.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "06-contradiction-spanish",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "## Goal\nen azul.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "07-low-signal",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nuhm yeah so like, you know, do the thing.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "08-empty-asks-question",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": ""
+    },
+    {
+      "id": "09-with-context",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Windsurf with full repo access.\n\n## Goal\nAdd a Logout button to the header.\n\n## Project context\nReact 19 SPA. Header lives in src/components/Header.tsx. Auth via useAuth() hoo"
+    },
+    {
+      "id": "10-with-attachments",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are GitHub Copilot in agent mode.\n\n## Goal\nFix the failing test in this file.\n\n## Requirements\n- Ship it.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "11-multi-sentence-requirements",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nAdd a search box to the products page.\n\n## Constraints\n- It must debounce by 300ms.\n- Do not add any new dependencies.\n\n## Output\n-"
+    },
+    {
+      "id": "12-constraint-no",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nAdd unit tests for the cart reducer.\n\n## Requirements\n- No e2e, just unit.\n- Ship it.\n\n## Output\n- Apply minimal, focused changes.\n"
+    },
+    {
+      "id": "13-filler-only",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\num, uh, like, you know, kinda, sorta\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "14-claude-target",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are Claude Code with file-edit tools.\n\n## Goal\nDocument the public API of src/lib/llm.ts.\n\n## Requirements\n- Ship it.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "15-windsurf-target",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Windsurf with full repo access.\n\n## Goal\nMigrate the Toast component to use the new design tokens.\n\n## Requirements\n- Ship it.\n\n## Output\n- Apply minimal, focused changes.\n- D"
+    },
+    {
+      "id": "16-copilot-target",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are GitHub Copilot in agent mode.\n\n## Goal\nAdd a CHANGELOG entry for v1.2.0.\n\n## Requirements\n- Ship it.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "17-spanish-multi",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nAgrega validación al formulario de login.\n\n## Requirements\n- Mensajes de error en español.\n- Listo.\n\n## Output\n- Apply minimal, foc"
+    },
+    {
+      "id": "18-mixed-language",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nRefactor el componente Button para que use forwardRef.\n\n## Requirements\n- Ship it.\n\n## Output\n- Apply minimal, focused changes.\n- D"
+    },
+    {
+      "id": "19-long-input",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nWe need to overhaul the checkout page.\n\n## Requirements\n- Currently it has three steps but users drop off at step two.\n- Combine st"
+    },
+    {
+      "id": "20-tiny-input",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nFix bug.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "21-question-input",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nShould I use Zustand or Redux for state?\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "22-with-context-no-finalise",
+      "ok": true,
+      "status": "refining",
+      "expectedStatus": "refining",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nAdd a dark mode toggle to the Settings page.\n\n## Project context\nTailwind CSS v4. Theme handled by the `next-themes` package.\n\n## O"
+    },
+    {
+      "id": "23-attachments-only-context",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nGenerate JSDoc for every exported function.\n\n## Requirements\n- Ship it.\n\n## Output\n- Apply minimal, focused changes.\n- Do not inven"
+    },
+    {
+      "id": "24-finalise-marker-listo",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are Claude Code with file-edit tools.\n\n## Goal\nAgrega tests para el helper formatCurrency.\n\n## Requirements\n- Listo.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unrelated edits."
+    },
+    {
+      "id": "25-finalise-go-ahead",
+      "ok": true,
+      "status": "ready",
+      "expectedStatus": "ready",
+      "failures": [],
+      "draftPreview": "You are operating inside Cursor. Use the workspace context.\n\n## Goal\nWire up the new /api/users endpoint.\n\n## Requirements\n- Go ahead.\n\n## Output\n- Apply minimal, focused changes.\n- Do not invent unre"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(124, 92, 255, 0.12), transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.08), transparent 45%), #0b0d12;
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accentSoft disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply text-slate-200 hover:bg-surface disabled:opacity-50;
+  }
+  .card {
+    @apply rounded-lg border border-border bg-surface/70 p-4 backdrop-blur;
+  }
+  .input {
+    @apply w-full rounded-md border border-border bg-background/60 px-3 py-2 text-sm text-slate-100 placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30;
+  }
+  .kbd {
+    @apply rounded border border-border bg-background/80 px-1.5 py-0.5 font-mono text-[10px] uppercase text-muted;
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-toast-in {
+  animation: toast-in 220ms ease-out;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background-image: linear-gradient(
+    90deg,
+    rgba(124, 92, 255, 0) 0%,
+    rgba(124, 92, 255, 0.25) 50%,
+    rgba(124, 92, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}

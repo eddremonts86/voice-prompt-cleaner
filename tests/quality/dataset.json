@@ -1,0 +1,281 @@
+[
+  {
+    "id": "01-simple-goal",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Refactor App.tsx to use the new API and keep behaviour identical.",
+    "expected": {
+      "status": "refining",
+      "mustContain": ["app.tsx", "new", "api"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "02-finalisation-cue",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Refactor App.tsx to use the new API. Ship it.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["app.tsx", "api"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "03-finalisation-es",
+    "lang": "es",
+    "agent": "claude",
+    "input": "Refactoriza App.tsx para usar el nuevo API. Listo.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["app.tsx", "api"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "04-contradiction-actually",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Make the button green. Actually make it light purple.",
+    "expected": {
+      "status": "refining",
+      "mustContain": ["light purple"],
+      "mustNotContain": ["green"]
+    }
+  },
+  {
+    "id": "05-contradiction-chain",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Make it green. Actually red. Scratch that, instead make it blue. On second thought, make that purple.",
+    "expected": {
+      "status": "refining",
+      "mustContain": ["purple"],
+      "mustNotContain": ["green", "red", "blue"]
+    }
+  },
+  {
+    "id": "06-contradiction-spanish",
+    "lang": "es",
+    "agent": "generic",
+    "input": "Hazlo en rojo. Mejor en azul.",
+    "expected": {
+      "status": "refining",
+      "mustContain": ["azul"],
+      "mustNotContain": ["rojo"]
+    }
+  },
+  {
+    "id": "07-low-signal",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "uhm yeah so like, you know, do the thing.",
+    "expected": {
+      "status": "refining",
+      "mustContain": [],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "08-empty-asks-question",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "",
+    "expected": {
+      "status": "refining",
+      "mustContain": [],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "09-with-context",
+    "lang": "en",
+    "agent": "windsurf",
+    "input": "Add a Logout button to the header. Ship it.",
+    "projectContext": "React 19 SPA. Header lives in src/components/Header.tsx. Auth via useAuth() hook from src/hooks/useAuth.ts.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["logout", "header"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "10-with-attachments",
+    "lang": "en",
+    "agent": "copilot",
+    "input": "Fix the failing test in this file. Ship it.",
+    "attachments": "FILE: src/utils/sum.test.ts\n---\nimport { sum } from './sum';\nit('adds two numbers', () => { expect(sum(2,3)).toBe(5); });",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["test", "file"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "11-multi-sentence-requirements",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Add a search box to the products page. It must debounce by 300ms. Do not add any new dependencies.",
+    "expected": {
+      "status": "refining",
+      "mustContain": ["search", "debounce", "300"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "12-constraint-no",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Add unit tests for the cart reducer. No e2e, just unit. Ship it.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["cart", "reducer", "unit"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "13-filler-only",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "um, uh, like, you know, kinda, sorta",
+    "expected": {
+      "status": "refining",
+      "mustContain": [],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "14-claude-target",
+    "lang": "en",
+    "agent": "claude",
+    "input": "Document the public API of src/lib/llm.ts. Ship it.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["llm.ts", "document"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "15-windsurf-target",
+    "lang": "en",
+    "agent": "windsurf",
+    "input": "Migrate the Toast component to use the new design tokens. Ship it.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["toast", "design", "tokens"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "16-copilot-target",
+    "lang": "en",
+    "agent": "copilot",
+    "input": "Add a CHANGELOG entry for v1.2.0. Ship it.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["changelog", "v1.2.0"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "17-spanish-multi",
+    "lang": "es",
+    "agent": "cursor",
+    "input": "Agrega validación al formulario de login. Mensajes de error en español. Listo.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["login", "validaci"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "18-mixed-language",
+    "lang": "mixed",
+    "agent": "cursor",
+    "input": "Refactor el componente Button para que use forwardRef. Ship it.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["button", "forwardref"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "19-long-input",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "We need to overhaul the checkout page. Currently it has three steps but users drop off at step two. Combine steps two and three into a single page. Keep the existing API contract. Add inline validation. The submit button must be disabled until all required fields are valid. Match the existing visual style. Do not introduce new dependencies. Ship it.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["checkout", "validation"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "20-tiny-input",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Fix bug.",
+    "expected": {
+      "status": "refining",
+      "mustContain": [],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "21-question-input",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Should I use Zustand or Redux for state?",
+    "expected": {
+      "status": "refining",
+      "mustContain": [],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "22-with-context-no-finalise",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Add a dark mode toggle to the Settings page.",
+    "projectContext": "Tailwind CSS v4. Theme handled by the `next-themes` package.",
+    "expected": {
+      "status": "refining",
+      "mustContain": ["dark", "settings"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "23-attachments-only-context",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Generate JSDoc for every exported function. Ship it.",
+    "attachments": "FILE: src/utils/format.ts\n---\nexport function formatCurrency(n: number): string { return n.toFixed(2); }\nexport function formatDate(d: Date): string { return d.toISOString(); }",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["jsdoc"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "24-finalise-marker-listo",
+    "lang": "es",
+    "agent": "claude",
+    "input": "Agrega tests para el helper formatCurrency. Listo.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["formatcurrency", "tests"],
+      "mustNotContain": []
+    }
+  },
+  {
+    "id": "25-finalise-go-ahead",
+    "lang": "en",
+    "agent": "cursor",
+    "input": "Wire up the new /api/users endpoint. Go ahead.",
+    "expected": {
+      "status": "ready",
+      "mustContain": ["api", "users"],
+      "mustNotContain": []
+    }
+  }
+]
