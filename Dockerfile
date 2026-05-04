@@ -27,13 +27,13 @@ RUN printf 'server {\n\
     gzip on;\n\
     gzip_types text/css application/javascript application/json image/svg+xml;\n\
     location /assets/ {\n\
-        expires 1y;\n\
-        add_header Cache-Control "public, immutable";\n\
+    expires 1y;\n\
+    add_header Cache-Control "public, immutable";\n\
     }\n\
     location / {\n\
-        try_files $uri $uri/ /index.html;\n\
+    try_files $uri $uri/ /index.html;\n\
     }\n\
-}' > /etc/nginx/conf.d/default.conf
+    }' > /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
