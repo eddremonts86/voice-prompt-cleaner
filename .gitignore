@@ -1,8 +1,19 @@
 node_modules
 dist
 coverage
+
+# Environment files — NEVER commit these
+# Only .env.example is tracked
 .env
+.env.*
 .env.local
-.env.*.local
-.DS_Store
+.env.development
+.env.production
+!.env.example
+
+# Logs
 *.log
+
+# OS
+.DS_Store
+Thumbs.db
