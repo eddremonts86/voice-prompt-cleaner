@@ -28,11 +28,11 @@ const PRESETS: Preset[] = [
   },
   {
     label: 'Ollama (local)',
-    baseUrl: 'http://localhost:11434/v1',
-    model: 'llama3.1',
+    baseUrl: 'http://localhost:11435/v1',
+    model: 'qwen3.5:2b',
     needsKey: false,
     jsonMode: false,
-    hint: 'No key needed. Run `ollama serve` and `ollama pull llama3.1`.',
+    hint: 'No key needed. Workspace Docker Ollama on port 11435. Run: docker compose --profile ai up -d',
   },
   {
     label: 'LM Studio (local)',
@@ -43,12 +43,12 @@ const PRESETS: Preset[] = [
     hint: 'No key needed. Start the LM Studio local server.',
   },
   {
-    label: 'llama.cpp / vLLM (local)',
-    baseUrl: 'http://localhost:8000/v1',
+    label: 'llama.cpp (local)',
+    baseUrl: 'http://localhost:8080/v1',
     model: 'local-model',
     needsKey: false,
     jsonMode: false,
-    hint: 'OpenAI-compatible local server, key optional.',
+    hint: 'OpenAI-compatible local server. Workspace Docker llama.cpp on port 8080.',
   },
   {
     label: 'Custom',
