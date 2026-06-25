@@ -7,9 +7,9 @@ RUN corepack enable
 
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml .npmrc ./
 
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --ignore-scripts
 
 COPY . .
 
@@ -21,7 +21,7 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 
 # SPA fallback: all routes return index.html
 RUN printf 'server {\n\
-    listen 80;\n\
+    listen 3000;\n\
     root /usr/share/nginx/html;\n\
     index index.html;\n\
     gzip on;\n\
@@ -35,6 +35,6 @@ RUN printf 'server {\n\
     }\n\
     }' > /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["nginx", "-g", "daemon off;"]
